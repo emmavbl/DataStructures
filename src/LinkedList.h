@@ -75,7 +75,8 @@ public:
 		head = previousNode;
 	}
 
-	bool LinkedList::search(const T data) {
+	bool LinkedList::search(const T data) const
+	{
 		ListNode<T>* currentNode = head;
 
 		while (currentNode)
@@ -86,6 +87,20 @@ public:
 		}
 
 		return false;
+	}
+
+	int LinkedList::countElements() const
+	{
+		int count = 0;
+
+		ListNode<T>* currentNode = head;
+		while (currentNode)
+		{
+			count++;
+			currentNode = currentNode->next;
+		}
+
+		return count;
 	}
 
 public:

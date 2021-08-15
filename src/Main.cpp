@@ -34,5 +34,12 @@ int main()
 	std::cout << listOfString.search("Emma") << std::endl;	// 0
 	std::cout << listOfInt.search(8) << std::endl;			// 1
 
+
+	std::cout << listOfInt.countElements() << std::endl;	// 6
+
+	LinkedList<float> listOfFloat;
+	std::cout << listOfFloat.countElements() << std::endl;	// 0
+
+
 	return 1;
 }
