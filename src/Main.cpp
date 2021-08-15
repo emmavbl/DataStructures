@@ -40,6 +40,17 @@ int main()
 	LinkedList<float> listOfFloat;
 	std::cout << listOfFloat.countElements() << std::endl;	// 0
 
+	std::cout << listOfString.removeLast() << std::endl;	// Hello
+	listOfString.print();	// head->C++->Enjoy->!->World->tail
+
+	std::cout << listOfFloat.removeLast() << std::endl;	// 0
+	listOfFloat.print();	// head->tail
+
+	listOfFloat.add(5.5);
+	listOfFloat.push(9.33);
+	std::cout << listOfFloat.removeLast() << std::endl;	// 5.55
+	listOfFloat.print();	// head->9.33->tail
+
 
 	return 1;
 }

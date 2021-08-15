@@ -38,14 +38,38 @@ public:
 		head->next = previousHead;
 	}
 
-	void LinkedList::print() const
+	T LinkedList::removeLast()
 	{
 		if (!head)
-			return;
-
-		std::cout << "head->";
+			return 0;
 
 		ListNode<T>* currentNode = head;
+		ListNode<T>* previousNode = nullptr;
+
+		while (currentNode->next)
+		{
+			previousNode = currentNode;
+			currentNode = currentNode->next;
+		}
+
+		if (previousNode)
+			previousNode->next = nullptr;
+		T data = currentNode->data;
+
+		if (currentNode == head)
+			head = nullptr;
+
+		delete currentNode;
+		return data;
+	}
+
+	void LinkedList::print() const
+	{
+		std::cout << "head->";
+
+		ListNode<T>* currentNode = nullptr;
+		if (head)
+			currentNode = head;
 
 		while (currentNode)
 		{
