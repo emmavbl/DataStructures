@@ -63,7 +63,7 @@ public:
 
 		ListNode<T>* currentNode = head;
 		ListNode<T>* previousNode = nullptr;
-		ListNode<T>* nextNode;
+		ListNode<T>* nextNode = nullptr;
 		while (currentNode)
 		{
 			nextNode = currentNode->next;
@@ -73,6 +73,19 @@ public:
 		}
 
 		head = previousNode;
+	}
+
+	bool LinkedList::search(const T data) {
+		ListNode<T>* currentNode = head;
+
+		while (currentNode)
+		{
+			if (currentNode->data == data)
+				return true;
+			currentNode = currentNode->next;
+		}
+
+		return false;
 	}
 
 public:

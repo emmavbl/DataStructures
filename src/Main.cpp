@@ -31,5 +31,8 @@ int main()
 	listOfString.reverse();
 	listOfString.print();	// head->C++->Enjoy->!->World->Hello->tail
 
+	std::cout << listOfString.search("Emma") << std::endl;	// 0
+	std::cout << listOfInt.search(8) << std::endl;			// 1
+
 	return 1;
 }
