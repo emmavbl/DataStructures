@@ -1,13 +1,13 @@
 #pragma once
 
-class Node
+class ListNode
 {
 public:
-	Node(int data);
-	~Node();
+	ListNode(int data);
+	~ListNode();
 
 public:
 	int data;
-	Node* next;
+	ListNode* next;
 
 };

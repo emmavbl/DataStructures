@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Node.h"
 
-Node::Node(int data)
+ListNode::ListNode(int data)
 	:data(data), next(nullptr)
 {}
 
-Node::~Node()
+ListNode::~ListNode()
 {
 	delete next;
 }

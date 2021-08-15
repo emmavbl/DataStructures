@@ -13,5 +13,5 @@ public:
 	void reverse();
 
 public:
-	Node* head;
+	ListNode* head;
 };
