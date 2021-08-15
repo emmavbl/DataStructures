@@ -38,6 +38,18 @@ public:
 		head->next = previousHead;
 	}
 
+	T LinkedList::pop()
+	{
+		if (!head)
+			return 0;
+
+		ListNode<T>* previousHead = head;
+		head = head->next;
+
+		T data = previousHead->data;
+		return data;
+	}
+
 	T LinkedList::removeLast()
 	{
 		if (!head)

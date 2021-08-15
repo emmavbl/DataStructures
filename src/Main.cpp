@@ -43,14 +43,24 @@ int main()
 	std::cout << listOfString.removeLast() << std::endl;	// Hello
 	listOfString.print();	// head->C++->Enjoy->!->World->tail
 
-	std::cout << listOfFloat.removeLast() << std::endl;	// 0
+	std::cout << listOfFloat.removeLast() << std::endl;		// 0
 	listOfFloat.print();	// head->tail
 
 	listOfFloat.add(5.5);
 	listOfFloat.push(9.33);
-	std::cout << listOfFloat.removeLast() << std::endl;	// 5.55
+	std::cout << listOfFloat.removeLast() << std::endl;		// 5.5
 	listOfFloat.print();	// head->9.33->tail
 
+	std::cout << listOfInt.pop() << std::endl;				// 1
+	std::cout << listOfInt.pop() << std::endl;				// 8
+	listOfInt.print();		// head->7->2->5->12->tail
+	std::cout << listOfInt.countElements() << std::endl;	// 4
+
+	std::cout << listOfFloat.pop() << std::endl;			// 9.33
+	listOfFloat.print();	// head->tail
+	
+	std::cout << listOfFloat.pop() << std::endl;			// 9.33
+	listOfFloat.print();	// head->tail
 
 	return 1;
 }
