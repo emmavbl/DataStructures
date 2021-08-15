@@ -25,7 +25,13 @@ void LinkedList::add(int data)
 	}
 
 	currentNode->next = new Node(data);
-	currentNode = nullptr;
+}
+
+void LinkedList::push(int data)
+{
+	Node* previousHead = head;
+	head = new Node(data);
+	head->next = previousHead;
 }
 
 void LinkedList::print() const
@@ -33,12 +39,34 @@ void LinkedList::print() const
 	if (!head) 
 		return;
 
+	std::cout << "head->";
+
 	Node* currentNode = head;
 
 	while (currentNode)
 	{
-		std::cout << currentNode->data << std::endl;
+		std::cout << currentNode->data << "->";
 		currentNode = currentNode->next;
 	}
-	currentNode = nullptr;
+
+	std::cout << "tail" << std::endl;
+}
+
+void LinkedList::reverse()
+{
+	if (!head)
+		return;
+
+	Node* currentNode = head;
+	Node* previousNode = nullptr;
+	Node* nextNode;
+	while (currentNode)
+	{	
+		nextNode = currentNode->next;
+		currentNode->next = previousNode;
+		previousNode = currentNode;
+		currentNode = nextNode;
+	}
+	
+	head = previousNode;
 }

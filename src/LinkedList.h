@@ -8,7 +8,9 @@ public:
 	~LinkedList();
 
 	void add(int data);
+	void push(int data);
 	void print() const;
+	void reverse();
 
 public:
 	Node* head;
